@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-prisma-performace
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: adsqwe123
+      POSTGRES_DB: postgres-prisma-performance
+    ports:
+      - '5432:5432'
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+          cpus: '1'
